@@ -1,0 +1,32 @@
+##creating mysql database
+
+CREATE DATABASE onlinestore;
+
+CREATE TABLE onlinestore.product(
+  id INT NOT NULL AUTO_INCREMENT,
+  name    VARCHAR(100) NOT NULL,
+  price   DOUBLE NOT NULL,
+  quantity INT NOT NULL,
+  supplier VARCHAR(45) NOT NULL,
+  PRIMARY KEY (id));
+
+INSERT INTO onlinestore.product (id, name, price, quantity, supplier) VALUES ('1', 'lego', '10.00', '100', '3P');
+INSERT INTO onlinestore.product (id,name, price, quantity, supplier) VALUES ('2', 'action man', '15.00', '100', 'WS');
+INSERT INTO onlinestore.product (id,name, price, quantity, supplier) VALUES ('3', 'puzzle', '05.00', '200', '3P');
+INSERT INTO onlinestore.product (id,name, price, quantity, supplier) VALUES ('4', 'book', '10.00', '50', 'WS');
+INSERT INTO onlinestore.product (id,name, price, quantity, supplier) VALUES ('5', 'playdough', '12.00', '150', '3P');
+INSERT INTO onlinestore.product (id,name, price, quantity, supplier) VALUES ('6', 'dolls house', '40.00', '150', 'WS');
+INSERT INTO onlinestore.product (id,name, price, quantity, supplier) VALUES ('7', 'pencil case', '10.00', '120', '3P');
+
+CREATE TABLE onlinestore.shopping_cart (
+   cartid     INT NOT NULL AUTO_INCREMENT,
+   price      DOUBLE NULL,
+   qty        INT,
+   productid  INT NOT NULL,
+   PRIMARY KEY (`cartid`));
+   
+
+##pylint and automation anywhere
+
+
+   
